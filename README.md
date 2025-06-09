@@ -13,7 +13,7 @@ This is a working OpenCore EFI configuration for **HP Omen 15-dc1092tx** running
 | **iGPU**         | Intel UHD Graphics 630                   |
 | **dGPU**         | NVIDIA GeForce GTX 1650 *(disabled)*     |
 | **RAM**          | 16 GB DDR4 @ 2666 MHz                    |
-| **Storage**      | 512 GB NVMe SSD                          |
+| **Storage**      | 1TB NVMe SSD and 1TB Hdd                 |
 | **Wi-Fi**        | Intel Wireless-AC (Replaced with AirportItlwm) |
 | **Bluetooth**    | Intel Bluetooth *(via IntelBluetoothFirmware + BlueToolFixup)* |
 | **Audio**        | Realtek ALC295 (AppleALC with `alcid=3`) |
