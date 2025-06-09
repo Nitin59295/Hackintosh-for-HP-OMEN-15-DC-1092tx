@@ -43,7 +43,7 @@ To simplify the EFI creation and modification process, you can use **[OpenCore S
 
 > 📌 Tip: Use OpenCore Simplified to quickly update this EFI to match your hardware or macOS version. Just load your existing `config.plist`, make changes, and export.
 
-
+---
 ## ✅ Working Features
 
 - ✅ Intel UHD 630 graphics with hardware acceleration
@@ -58,7 +58,7 @@ To simplify the EFI creation and modification process, you can use **[OpenCore S
 - ✅ Trackpad and keyboard (via VoodooRMI and VoodooInput)
 - ✅ USB-C DisplayPort output (with framebuffer patching)
 
-
+---
 ## 📡 Native Wi-Fi Support (Intel + AirportItlwm)
 
 This EFI uses `AirportItlwm.kext` to enable Wi-Fi on Intel wireless cards.  
@@ -95,6 +95,24 @@ To make **native Wi-Fi functionality** work properly on macOS Sequoia 15.1, you 
 > This EFI is tailored specifically for **HP Omen 15-dc1092tx** with the specs listed above.  
 > Your mileage may vary if your hardware differs even slightly.  
 > Always make sure to **generate your own SMBIOS** using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to avoid serial number duplication.
+
+---
+🧰 Tools Used
+
+Here are the key tools used during this EFI creation and maintenance:
+
+| Tool | Purpose |
+|------|---------|
+| [ProperTree](https://github.com/corpnewt/ProperTree) | For editing `config.plist` with proper OpenCore structure and key sorting |
+| [OpenCore Legacy Patcher (OLCP)](https://github.com/dortania/OpenCore-Legacy-Patcher) | To apply post-install root patches for native Wi-Fi and GPU acceleration on newer macOS versions |
+| [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) | To generate unique and valid SMBIOS info (serial number, MLB, etc.) |
+| [OCAT (OpenCore Auxiliary Tool)](https://github.com/ic005k/QtOpenCoreConfig) | A user-friendly tool to manage OpenCore EFI, kexts, and ACPI |
+| [USBMap](https://github.com/corpnewt/USBMap) | For creating a custom USB map and generating USBMap.kext |
+| [Hackintool](https://github.com/headkaze/Hackintool) | For detailed hardware information, framebuffer patching, and port discovery |
+| [MaciASL](https://github.com/acidanthera/MaciASL) | To view, patch, or compile custom ACPI tables (DSDT/SSDT) |
+| [IORegistryExplorer](https://github.com/CloverHackyColor/ioRegistryExplorer) | To verify device trees and kext injection (graphics, audio, USB, etc.) |
+
+> 💡 These tools are essential for diagnosing issues, fine-tuning your EFI, and maintaining compatibility with future macOS updates.
 
 ---
 
